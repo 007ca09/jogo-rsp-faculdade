@@ -143,7 +143,8 @@ def render_game():
     #definindo as escolhas do jogador(combobox)
     playable_options_cbx = ttk.Combobox(game, values=["Pedra", "Papel", "Tesoura"],width=10, state="readonly")
     playable_options_cbx.place(x=100, y=170)
-    
+    playable_options_cbx.current(0)
+        
     #definindo imagem inicial da mão do computador
     cpu_hand_image_loader = tk.PhotoImage(file="cpu_hand_images/static_and_rock_cpu_hand.png")
     cpu_hand_image_lbl = tk.Label(image=cpu_hand_image_loader)
